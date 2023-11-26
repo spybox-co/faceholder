@@ -1,0 +1,19 @@
+.Wrapper {
+  margin: 0 auto;
+  padding: 0 3rem;
+  max-width: 166rem;
+  width: 100%;
+  min-width: 20rem;
+
+  // fix with 2% padding
+
+  @media (max-width: 166rem) {
+    padding: 0 2%;
+  }
+  @media (max-width: 99rem) {
+    padding: 0 2rem;
+  }
+  @media (max-width: 42rem) {
+    padding: 0 1rem;
+  }
+}

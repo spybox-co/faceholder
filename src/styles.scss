@@ -1,0 +1,80 @@
+// @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,600;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap');
+
+
+@import './styles/variables.scss';
+@import './styles/typography.scss';
+@import './styles/fibre.scss';
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Space Grotesk'; // $font-stack;
+  font-feature-settings: "zero" on,"ss01" off,"ss02" on,"ss03" on,"ss04" on,"ss05" off,"liga" off;
+  color: $white;
+  background-color: $background;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: 0;
+  background-color: $white;
+  margin: 0.25rem;
+  min-height: 2rem;
+  padding: 0 0.5rem;
+  &:hover {
+    background-color: $gray-10;
+  }
+  &:active {
+    background-color: $gray-20;
+  }
+}
+input {
+  // width: 3rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  min-height: 3rem;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background-color: $gray-80;
+  color: $gray-30;
+  padding: 0 0.5rem;
+  border: none;
+  border-bottom: 1px solid $gray-60;
+  user-select: none;
+}
+ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+.Leadspace {
+  &-container {
+    padding: 2rem 0;
+    width: 50%;
+    max-width: 30rem;
+  }
+  
+  min-height: 20rem;
+  height: 50vh;
+  color: $gray-10;
+  background-color: $blue-80; // $background;
+}
+
+
+.About {
+  background: $gray-100;
+  padding: 2rem 0;
+  .content {
+    width: 50%;
+    max-width: 30rem;
+  }
+}
+
+

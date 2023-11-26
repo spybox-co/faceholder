@@ -1,0 +1,70 @@
+@import '../../styles/variables.scss';
+@import '../../styles/typography.scss';
+
+
+// https://codepen.io/russpate/pen/qRaepv
+
+// https://codepen.io/codyhouse/pen/KKdrmXj
+// https://codepen.io/Sherpa23/pen/rKvJXg
+// https://codepen.io/avithour/pen/xzNJaV
+
+// https://codepen.io/designcouch/pen/OJPYOeY
+
+// Podswietlenie jak w unsplash.com - rowniez mobilne kafle
+
+
+.Image-wrapper {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.Image-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.Image {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  
+  &.FaceItem {
+    transition: 300ms;
+    background-color: $gray-50;
+    // box-shadow: 0 2px 4px 0 rgba($black,0.25);
+  }
+  &.FaceItem:hover {
+    .Button-group, .Info-panel {
+      display: block;
+    }
+  }
+  img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+  }
+  .Button-group {
+    display: none;
+    position: absolute;
+    background: $background;
+    bottom: 0;
+    right: 0;
+    // margin: 0.5rem;
+    // button {
+    //   margin-left: 0.5rem;
+    // }
+  }
+  .Info-panel {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.75rem;
+    margin: 0.25rem;
+    color: $white;
+    text-shadow: 0 2px 4px $black;
+  }
+}

@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.Footer {
+  min-height: 25vh;
+  color: $gray-60;
+  background-color: $black;
+
+  .Footer-container {
+    padding: 2rem 0;
+
+    p {
+      font-size: 1rem;
+      margin: 0 0 0.5rem;
+    }
+  }
+}
