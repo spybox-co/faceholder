@@ -2,9 +2,7 @@ import {
   useEffect,
   useState,
   useRef,
-  useContext,
   useMemo,
-  Suspense
 } from 'react';
 
 import './BumperSection.scss';
@@ -49,8 +47,7 @@ const BumperSection = ({ block = 'start', onClick }) => {
       className={classes.root}
     >
       <div>
-        <div className="glyph">↓</div>
-        {/* <h6 className="responsive-heading-03">Poor results?</h6> */}
+        <Glyph type="↓" />
 
         <div>Load more</div>
       </div>

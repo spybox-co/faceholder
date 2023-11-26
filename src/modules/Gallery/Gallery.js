@@ -1,11 +1,9 @@
 import {
   useEffect,
   useState,
-  useRef,
   useContext,
-  useMemo,
-  Suspense
 } from 'react';
+
 import { store } from '../../store.js';
 
 import { Wrapper } from '../../containers/Wrapper';
@@ -25,9 +23,9 @@ import Skeleton from '../../components/Skeleton';
 const itemsAmount = 48;
 const moreItems = 48;
 
-export const Gallery = (props) => {
-  const { state, dispatch } = useContext(store);
-  const { assets, assetsAmount, refresh } = state;
+export const Gallery = () => {
+  const { state } = useContext(store);
+  const { assets, refresh } = state;
   const [isLoading, setLoading] = useState(true);
   const [count, setCount] = useState(itemsAmount);
   const skeletons = Array.from(Array(24).keys());
@@ -51,12 +49,16 @@ export const Gallery = (props) => {
       setLoading(true);
       setCount(itemsAmount);
     }
+
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: 'smooth'
     });
   }, [refresh]);
+  useEffect(() => {
+    console.log("Results:", count);
+  }, [count]);
 
   const listProps = {
     data: assets,
@@ -64,12 +66,14 @@ export const Gallery = (props) => {
     skeletons: skeletons,
     isLoading: isLoading
   };
-  const pageReload = () => {
-    dispatch({
-      type: 'refresh',
-      value: true
-    });
-  };
+
+  // const pageReload = () => {
+  //   dispatch({
+  //     type: 'refresh',
+  //     value: true
+  //   });
+  // };
+
   const loadMore = () => {
     setCount(count + moreItems);
   };
@@ -86,7 +90,7 @@ export const Gallery = (props) => {
 
   return (
     <Wrapper className="Gallery-module">
-      <CommandBar />
+      <CommandBar results={count} />
       <div className="List-container">
         <ul className="Gallery List">
           <ListComponent {...listProps} />

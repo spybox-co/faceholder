@@ -4,9 +4,9 @@ import { store } from '../../store.js';
 import { InlineLoading } from '../../components/Loading';
 import { Button, IconButton } from '../../components/Button';
 
-export const CommandBar = () => {
+export const CommandBar = ({ results }) => {
   const { state, dispatch } = useContext(store);
-  const { refresh, assets } = state;
+  const { refresh } = state;
   const [isLoading, setIsLoading] = useState(refresh);
 
   const pageReload = () => {
@@ -39,7 +39,7 @@ export const CommandBar = () => {
   return (
     <CommandBarContainer>
       <div className="left--actions">
-        {!isLoading && <Results data={assets} />}
+        {!isLoading && <Results data={results} />}
       </div>
       <div className="middle--actions"></div>
       <div className="ButtonGroup right--actions">
@@ -67,7 +67,7 @@ export const CommandBar = () => {
 const Results = ({ data }) => (
   <div className="Results">
     <span>
-      Results: <strong>{data && data.length}</strong>
+      Results: <strong>{data}</strong> 
     </span>
   </div>
 );

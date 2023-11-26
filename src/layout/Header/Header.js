@@ -1,11 +1,13 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { settings } from '../../store.js';
 import { Wrapper } from '../../containers/Wrapper';
 
 export const Header = () => {
-  useEffect(() => {
-    console.log('page offset', window.pageYOffset);
-  }, [window]);
+
+  // useEffect(() => {
+  //   console.log('page offset', window.pageYOffset);
+  // }, [window]);
+
   return (
     <header className="Header">
       <Wrapper>

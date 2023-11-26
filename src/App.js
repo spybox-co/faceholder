@@ -3,17 +3,17 @@ import './styles/global.scss';
 
 // import _ from 'lodash';
 import { useEffect, useContext } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { store } from './store.js';
 
 //import { getThisPersonDoesNotExist } from './utils/getThisPersonDoesNotExist';
-import { getFaces } from './utils/getFaces';
+// import { getFaces } from './utils/getFaces';
 
 import { Header, Main, Footer } from './layout';
 import { Gallery } from './modules';
 import { Wrapper } from './containers/Wrapper';
 import { Link } from './components/Link';
-import { BumperSection } from './components/BumperSection';
+// import { BumperSection } from './components/BumperSection';
 
 import { getFacesFromGlitch } from './utils/getFacesFromGlitch';
 
@@ -63,16 +63,12 @@ export default function App() {
     });
   };
 
-  const pageReload = () => {
-    dispatch({
-      type: 'refresh',
-      value: true
-    });
-  };
-
   // Investigating if data is pushed to the state
   useEffect(() => {
+    
     if (refresh) getAssets();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refresh]);
 
   return (
