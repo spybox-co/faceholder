@@ -1,7 +1,7 @@
 // import { useEffect } from 'react';
 // import { store } from '../../store.js';
 
-import axios from 'axios';
+// import axios from 'axios';
 // import { uf } from '../../utils/helpers';
 import { startDownload, imageToBlob } from '../../utils/func';
 
