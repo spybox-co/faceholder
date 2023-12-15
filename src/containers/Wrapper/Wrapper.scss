@@ -17,3 +17,18 @@
     padding: 0 1rem;
   }
 }
+
+.column {
+  @media (max-width: 166rem) {
+    width: calc(33% - 1rem);
+  }
+  @media (max-width: 99rem) {
+    width: calc(50% - 1rem);
+  }
+  @media (max-width: 66rem) {
+    width: calc(66% - 1rem);
+  }
+  @media (max-width: 42rem) {
+    width: 100%;
+  }
+}

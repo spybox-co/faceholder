@@ -13,8 +13,8 @@
 }
 body {
   margin: 0;
-  font-family: 'Space Grotesk'; // $font-stack;
-  font-feature-settings: "zero" on,"ss01" off,"ss02" on,"ss03" on,"ss04" on,"ss05" off,"liga" off;
+  font-family: $font-stack;
+  font-feature-settings: $font-settings-01;
   color: $white;
   background-color: $background;
 }
@@ -53,7 +53,6 @@ ul {
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
 }
-
 
 
 

@@ -168,7 +168,7 @@ h6 {
 }
 
 p, span {
-  font-feature-settings: "zero" on,"ss01" off,"ss02" on,"ss03" on,"ss04" on,"ss05" off,"liga" off;
+  // font-feature-settings: "zero" on,"ss01" off,"ss02" on,"ss03" on,"ss04" on,"ss05" off,"liga" off;
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 400;
@@ -177,4 +177,9 @@ p, span {
 
 strong {
   font-weight: 900;
+}
+
+.monoblock {
+  text-transform: uppercase;
+  line-height: 1.0;
 }
