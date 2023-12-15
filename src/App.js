@@ -17,6 +17,9 @@ import { Link } from './components/Link';
 
 import { getFacesFromGlitch } from './utils/getFacesFromGlitch';
 
+
+import './App.scss';
+
 // https://stackoverflow.com/questions/44698967/requesting-blob-images-and-transforming-to-base64-with-fetch-api
 
 // Credit this page
@@ -76,14 +79,19 @@ export default function App() {
       <Header />
       <LeadSpace />
       <Main>
-        <Gallery data={assets} />
-        {/* <div className="Card aspect-ratio-flex">
-          <BumperSection onClick={pageReload} block="nearest" />
-        </div> */}
+        <BrowsePhotos assets={assets} />
         <About />
       </Main>
       <Footer />
     </div>
+  );
+}
+
+const BrowsePhotos = ({ assets }) => {
+  return(
+    <section id="browse" className="BrowsePhotos">
+      <Gallery data={assets} />
+    </section>
   );
 }
 
@@ -93,8 +101,8 @@ const About = () => {
     stylegan: 'https://en.wikipedia.org/wiki/StyleGAN',
     faces: 'https://en.wikipedia.org/wiki/Human_image_synthesis'
   };
-  return (
-    <section className="About">
+  return(
+    <section id="about" className="About">
       <Wrapper>
         <div className="section-container">
           <h2>About</h2>

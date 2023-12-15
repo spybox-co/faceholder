@@ -4,6 +4,7 @@
   position: sticky;
   top: 0;
   margin: 0 -1rem;
+  padding: 0 0 1rem 0;
   z-index: 1000;
   // box-shadow: 0 4px 2px 0 $background;
   [class*="--actions"] {
@@ -18,7 +19,7 @@
     background-color: $background;
     display: flex;
     // width: 100%;
-    padding: 1rem 0rem;
+    padding: 1rem 1rem 0;
     text-align: right;
     justify-content: flex-end;
   }
@@ -27,9 +28,9 @@
   }
   .Results {
     display: flex;
-    padding: 0 1rem;
+    // padding: 0 1rem;
     align-items: center;
-    margin-right: 4rem;
+    margin-right: 1rem;
   }
 
 

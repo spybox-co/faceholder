@@ -54,27 +54,7 @@ ul {
   margin: 0; /* Remove margins */
 }
 
-.Leadspace {
-  &-container {
-    padding: 2rem 0;
-    width: 50%;
-    max-width: 30rem;
-  }
-  
-  min-height: 20rem;
-  height: 50vh;
-  color: $gray-10;
-  background-color: $blue-80; // $background;
-}
 
 
-.About {
-  background: $gray-100;
-  padding: 2rem 0;
-  .content {
-    width: 50%;
-    max-width: 30rem;
-  }
-}
 
 

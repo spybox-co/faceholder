@@ -38,3 +38,30 @@
 @import '../components/Loading/Loading.scss';
 @import '../components/Skeleton/Skeleton.scss';
 @import '../components/Spinner/Spinner.scss';
+
+
+main {
+    margin-top: 2rem;
+}
+
+.Leadspace {
+    &-container {
+        padding: 2rem 0;
+        width: 50%;
+        max-width: 30rem;
+    }
+    min-height: 50vh;
+    color: $blue-20;
+    background-color: $blue-60; // $background;
+}
+  
+  
+.About {
+    min-height: 50vh; // 75vh;
+    background: $gray-100;
+    padding: 2rem 0;
+    .content {
+        width: 50%;
+        max-width: 30rem;
+    }
+}

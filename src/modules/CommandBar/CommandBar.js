@@ -25,7 +25,7 @@ export const CommandBar = ({ results }) => {
   const UpdateRefreshButton = () => (
     <>
       <Button
-        kind="ghost"
+        kind="secondary"
         className="RefreshButton"
         onClick={pageReload}
         renderIcon={isLoading ? null : 'RotateLeft'}
@@ -67,7 +67,7 @@ export const CommandBar = ({ results }) => {
 const Results = ({ data }) => (
   <div className="Results">
     <span>
-      Results: <strong>{data}</strong> 
+      <strong>{data}</strong> results
     </span>
   </div>
 );
